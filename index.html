@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/style.css">
+<title>Secret-chest</title>
+<style>
+
+</style>
+</head>
+<body>
+    <header>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/my">Projects</a></li>
+        </ul>
+    </nav>
+    <div id="menuToggle">
+            <!--
+            A fake / hidden checkbox is used as click reciever,
+            so you can use the :checked selector on it.
+            -->
+            <input type="checkbox" />
+            <span class="material-icons" style="font-size: 36px">menu</span>
+            <!--
+            Too bad the menu has to be inside of the button
+            but hey, it's pure CSS magic.
+            -->
+            <ul id="menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/my">Projects</a></li>
+            </ul>
+        </div>
+    <h1>Secret-chest</h1>
+    </header>
+    <main>
+    <div class="badges">
+        <img src="https://img.shields.io/github/followers/Secret-chest?labelColor=546e7a&color=0d47a1&logo=github&style=flat-square">
+        <img src="https://img.shields.io/badge/-Linux%20Mint-%2381c784?logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAACZFBMVEUAAABAlUBOsU4ziDNQr1A8hzxRrlE3kkBJrVI5jjk2jTxKrlFOsU45jDlNs1NLrlE6kTo5jjlOsVNOsU43jDw1kDo5jj1Mr1BMrlE4jDtOsU45kDxLrVI2jz05jz1Nr1A5jjxMrU9MsE85jTxLrlE4jzo4jTxNrlFLr1JNsE84jzw3jjxMrlFOr1A4jTxNrlE3jz1MsE84jzxMr1A5jT1LrlE4jjw3jztNr1A3jzxMrk9Mr1BNr1A3jTw4jjxMsE84jzxNsFA4jjxNsE85jj1Lr1A4jjxMr1A3jj1Mr1A4jjtMr1A4jjxMrlE4jjxMr1BAnERAnENAnERusnI9l0FEo0g9l0A9l0FEo0h1tXeEvoZBnURBnUVBnkU3jjxrrm6gzKI4jjxMr09fp2Jns2mEwoc4jjxZqFs4jjxMrlBMr1A5kj5IqUydyJ%2FB3cI6kj5IqUw4jjw4jjxMrk9MsE84jjxNr1A4jjw5jz1LrU9Mr1C82L3A4MI4jjw5jz1LrU9Mr1A4jjxMr1BNmlBOmlFOsFJPm1NQsVRTsldWn1lYtFxbol5ft2Jft2NhuGRhuGVjpmZlp2hpqWxpu2xsvG9zwHZ0wHd2sXl3sXp4snp4wnt5snuBt4OEx4aFyIiGyImLyo2Oy5CRzZOXw5mbxZ2f06Gj1KWl1qen1qmt2a6t2a%2B03LW41bm41rq51ru94L%2FA4cHC4sTE48XH5MjL5szM4c3N4c7O4s%2FP4tDS6dLS6dPT6dPT6dTU6tXV6tbY69nd7d7k7uXn8ufo8ujy9vLz9%2FP2%2BPb3%2Bff4%2Bfj5%2Bfn5%2Bvn6%2Bvq%2FXSqCAAAAgXRSTlMADA0PEBETHBwkJiYnKCgpLC0uMTM1NjY5SUtMTlBQUFFRUVVVbW5ucHFyc3V2d3uGh4iJi4uen6ChoaKjpqenqqq2t7m6u73Gxs7P0NHS097f4Ofp6erq6urq7e3u7%2B%2Fv8fHx8fHy8vPz8%2FT09PT19fb39%2Ff6%2Bvv7%2B%2Fv7%2B%2Fz8%2FPzTdaNzAAAEF0lEQVR42u3ZA5MjTRjA8Zxt27ZtO3Zytm3bNoKzZudsLIP5Um9XbWqfoPdNT6q75p6d%2FRev7273FzSm2mA2O4%2Fxad%2B6dV0NqtMe4HD4tmw5zANwZMeOEd1La1SzJjPg6NHNZvOWY3wb1Lo1JsChzZu9TidXwKJZs6ZMmTRuXCsmAMluMnEFwJcSC4AE05Fv%2Ffu3RwKA9YBv48cP6969NgMApqOAuuMAkPXAx3U9gOZMmcIAIDnM5mOCQgIgmUxOQYRp9epVxQCw272wHnBtXq9eTatWzQIQPB17N2yIAADnA%2F7NmzaNASBie4YQAIRPxylIAG73ykBpN3nvTOR8wABQypIFbM%2B6Bwxp21ZbwOg%2BffADnj7Ng3%2FyOhw%2BlqikJALjgfINmAAHNmzYeyy1m4FAXt43%2BCcfX78OBG6dPn0rEIhEojD%2Bsvx1pFOnVqyATSbThmOpyQql9%2BfOvaeNy1TAsmVj0QD2r1%2FvST4f3JTlAoVS4fv3hbTxAlmmfAq7dk1iBUhp23NAUV2AvimhAaRsz0oufXj1KhMwo1mz6pgAdruHrAdpgN%2FvSL%2BVjH7K8t%2B%2FBfDnPx8%2BZAIWDBhQnx1AWk%2BmYxogeIYUpH7mz56lzlX6towLsGf9%2BtUrVsD4z0Dg0knSpUDgp6KkjF88duz69ZswzgdAWu5ywbhMXxnp4xUF8OTTp2y%2F6PfvFzoH%2FPqlAjCiSxeVgM%2BfswG%2Bf3%2FODti%2Bdq3OAUf27dMIAFUCMAPgeUEjABzX9QqA5wWNAHBc1y0Ajut6BcDzwgFtAHBc36RTADwv7NcUQJIwAyoBu3cf1BawZs02nQM6dx7ODrj24MHjsu7A%2BJ3E0MYlS0Khe%2BoABkM3dsCp8%2BevlnUWxs8mhhZbLDduXK6QAPaMRluFA3y5ffs4O8Bq9SaeFy48fPiDCyBSVHT7qIrWJ47rD4uLozgADQYOXPh%2FgHgkclcNYE%2FieeFRNBpnAtRo3nwmFQDdP8ocXP8HFBIKAGnyUUr3FUjldJQoFxb%2FNmDizp3ZAV%2FvM%2FdVLWDM0qU0AIewAFp27JgJOAFvZc7B%2FUFud8gSD4B8jIQA0LfvGKohGo0pOReLRsn2jATQrt1QKuDNm7eSlK%2FkUL4kvX3zBs4HWQCwLXP4LlCu%2BzAAanXrNvsovSv3c%2BhKyvmAAQCbEr9ge0YCIAkBwPU%2FAsDUqXPFfAp22npAAdSp0%2BOomNYbjRswAKpUadyjB99PAdYDr9OZFUAIdepMFTcdMQDETkeyPSMBTJ48Wwgg%2FXxgKL9uAqcjDgA5HwweOVLMemCzMQBIbXr2FPNFMBpRABJ18Pt3Ctme0QBajBo1YfLk6dPnCzkfGFhr0qSfgOmICVCtWt1upQ3fuvUgv%2FXAoL7Oq1bt5jcdNQf8Bzs1WrymkgfQAAAAAElFTkSuQmCC&style=flat-square">
+        <a href="https://scratch.mit.edu/users/mumu245"><img src="https://img.shields.io/badge/scratch-profile-ffa000?labelColor=546e7a&logo=scratch&logoColor=ffa000&style=flat-square"></a>
+        <a href="https://github.com/Secret-chest"><img src="https://img.shields.io/badge/github-profile-0d47a1?logo=github&labelColor=546e7a&logoColor=ffffff&style=flat-square"></a>
+    </div>
+    <p>
+        Hello. I am Secret-chest. I love Linux. I code in Python and HTML. All of my projects are open-source, and you can see them below.
+    </p>
+    <div class="card-full">
+        <h2>Scratch2Python [work in progress]</h2>
+        <p>
+        Scratch2Python will allow you to view Scratch projects, log in to Scratch,
+        browse the Scratch website, and much more, from an easy-to-use interface
+        written in Python. It will have several more components, like a Scratch
+        API module.
+        </p>
+        <a href="https://github.com/Secret-chest/Scratch2Python" class="button"><span class="material-icons">launch</span>View on GitHub</a>
+        <div class="badges">
+            <img src="https://img.shields.io/github/languages/top/Secret-chest/Scratch2Python?labelColor=546e7a&color=26c6da&logo=python&logoColor=26c6da&style=flat-square">
+            <img alt="GitHub" src="https://img.shields.io/github/license/Secret-chest/Scratch2Python?style=flat-square&labelColor=546e7a&color=ffa000">
+            <img alt="GitHub issues" src="https://img.shields.io/github/issues/Secret-chest/Scratch2Python?labelColor=546e7a&color=64dd17&logo=github&logoColor=ffffff&style=flat-square">
+            <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/Secret-chest/Scratch2Python?labelColor=546e7a&color=64dd17&logo=github&logoColor=ffffff&style=flat-square">
+            <img alt="GitHub milestones" src="https://img.shields.io/github/milestones/open/Secret-chest/Scratch2Python?labelColor=546e7a&color=64dd17&style=flat-square">
+            <a href="https://github.com/Secret-chest/scratch2python/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/Secret-chest/scratch2python?labelColor=546e7a&color=ffc107&logo=github&logoColor=ffffff&style=flat-square"></a>
+        </div>
+    </div>
+    </main>
+    <footer>
+        <h2>Secret-chest</h2>
+        <ul>
+            <li><a href="https://github.com/Secret-chest">GitHub</a></li>
+            <li><a href="https://scratch.mit.edu/users/mumu245">Scratch</a></li>
+            <li class="gray">YouTube channel coming soon</li>
+        </ul>
+    </footer>
+</body>
+</html>
