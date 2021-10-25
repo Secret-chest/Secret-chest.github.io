@@ -28,6 +28,9 @@ main {
 pre, code {
     font-family: "Roboto Mono", monospace;
 }
+.img-half {
+    width: 50%;
+}
 pre, blockquote {
     background: #eceff1;
     border-left: 4px solid #546e7a;
