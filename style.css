@@ -50,6 +50,9 @@ img {
     margin-right: auto;
     box-sizing: border-box;
     width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
 }
 header h1 {
     font-weight: 900;
