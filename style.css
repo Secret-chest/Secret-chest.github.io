@@ -191,7 +191,7 @@ a {
     font-weight: bold;
 }
 a:hover {
-    color: #ffab00;
+    color: #00695c;
     transition: cubic-bezier(1, 0, 0, 1) 0.4s;
 } 
 
@@ -297,7 +297,13 @@ a:hover {
     color: #ffffff;
 }
 #menu a:hover {
-    color: #ffab00;
+    color: #26a69a;
+}
+footer ul li a {
+    color: #26a69a;
+}
+footer ul li a::hover {
+    color: #80cbc4;
 }
 
 /*
