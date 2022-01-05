@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Material+Icons");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&family=Roboto+Mono&display=swap");
-* {
-    transition: 0.5s;
-}
 html, body {
   /* fix */
     max-width: 100%;
@@ -19,7 +16,7 @@ body {
     padding: 0;
 }
 body *::selection {
-    background: #00bcd4;
+    background: #009688;
     color: #ffffff;
 }
 main {
@@ -30,6 +27,30 @@ pre, code {
 }
 .img-half {
     width: 50%;
+}
+.dark {
+    background-color: #263238;
+    color: #ffffff;
+}
+@media screen and (max-width: 1000px) {
+    .cards .card-larger {
+        width: 400px !important;
+    }
+}
+@media screen and (min-width: 1000px) {
+    .cards .card-larger {
+        width: 800px !important;
+    }
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.cards .card-full {
+    margin: 16px;
+    width: 400px;
+    flex-grow: 1;
 }
 pre, blockquote {
     background: #eceff1;
@@ -65,14 +86,16 @@ h1 {
     font-size: 48px;
 }
 main {
+    animation-name: content;
+    animation-duration: 0.75s;
+    animation-timing-function: ease-out;
+}
+.content {
     max-width: 576px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    animation-name: content;
-    animation-duration: 0.75s;
-    animation-timing-function: ease-out;
 }
 header {
     color: #ffffff;
@@ -97,16 +120,37 @@ footer {
     width: auto;
 }
 .button {
-    background-color: #00bcd4;
+    background-color: #009688;
     color: #ffffff;
     padding: 8px;
     text-transform: uppercase;
-    box-shadow: 0 0 4px #000000;
+    box-shadow: 0 2px 4px #000000;
     border-radius: 2px;
+    margin: 8px;
+    position: relative;
+    overflow: hidden;
 }
 .button:hover {
-    background: #006064;
+    box-shadow: 0 4px 8px #000000;
     color: #ffffff;
+}
+.button .ripple-pad {
+    background: #ffffff99;
+    position: absolute;
+    opacity: 1;
+    transform: scale(0);
+    animation: RippleEffect 500ms cubic-bezier(0.2, 0, 0, 0.5) forwards;
+}
+  
+@keyframes RippleEffect {
+    to {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
 }
 .button .material-icons {
     position: relative;
@@ -138,11 +182,11 @@ nav ul li a {
     text-decoration: none;
 }
 nav ul li:hover, nav ul li a:hover {
-    background: #00bcd4;
+    background: #009688;
     color: #ffffff !important;
 }
 a {
-    color: #00bcd4;
+    color: #009688;
     text-decoration: none;
     font-weight: bold;
 }
