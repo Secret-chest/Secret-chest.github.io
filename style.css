@@ -220,8 +220,7 @@ a:hover {
 }
 
 
-#menuToggle
-{
+#menuToggle {
     display: block;
     position: fixed;
     top: 0;
@@ -248,8 +247,7 @@ a:hover {
     visibility: hidden;
 }
 
-#menuToggle input
-{
+#menuToggle input {
     display: block;
     width: 36px;
     height: 36px;
@@ -269,8 +267,7 @@ a:hover {
  * Make this absolute positioned
  * at the top left of the screen
  */
-#menu
-{
+#menu {
     position: absolute;
     left: -4px;
     width: 400px;
@@ -288,8 +285,7 @@ a:hover {
     box-shadow: 0 4px 8px #000000;
 }
 
-#menu li
-{
+#menu li {
     padding: 16px 0;
     font-size: 24px;
 }
@@ -309,12 +305,10 @@ footer ul li a::hover {
 /*
  * And let's slide it in from the left
  */
-#menuToggle input:checked ~ ul
-{
+#menuToggle input:checked ~ ul {
     transform: none;
 }
-#menuToggle input:checked span
-{
+#menuToggle input:checked span {
     content: "menu_open";
 }
 .material-icons {
