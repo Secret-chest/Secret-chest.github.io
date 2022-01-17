@@ -135,11 +135,11 @@ footer {
     color: #ffffff;
 }
 .button .ripple-pad {
-    background: #ffffff99;
+    background: #ffffffff;
     position: absolute;
     opacity: 1;
     transform: scale(0);
-    animation: RippleEffect 500ms cubic-bezier(0.2, 0, 0, 0.5) forwards;
+    animation: RippleEffect 200ms cubic-bezier(0.2, 0, 0, 0.5) forwards;
 }
   
 @keyframes RippleEffect {
