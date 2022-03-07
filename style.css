@@ -74,6 +74,7 @@ img {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
+    border-radius: 4px;
 }
 header h1 {
     font-weight: 900;
@@ -93,6 +94,14 @@ main {
 .content {
     max-width: 576px;
     width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+.wider {
+    max-width: 1024px;
+    width: 100%;
+    margin: 16px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -125,7 +134,7 @@ footer {
     padding: 8px;
     text-transform: uppercase;
     box-shadow: 0 2px 4px #000000;
-    border-radius: 2px;
+    border-radius: 4px;
     margin: 8px;
     position: relative;
     overflow: hidden;
@@ -374,4 +383,7 @@ footer ul li {
     position: absolute;
     right: 32px;
     bottom: 160px;
+}
+.card-full[style] {
+    color: #ffffff;
 }
